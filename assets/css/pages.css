@@ -1,0 +1,813 @@
+/* ==========================================================================
+   TROODON PARK HOTEL — PAGES & UTILITY CLASSES (NO INLINE STYLES)
+   ========================================================================== */
+
+/* --- General Utilities --- */
+.w-100 {
+  width: 100% !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.gap-sm {
+  gap: 0.8rem !important;
+}
+
+.gap-md {
+  gap: 1.2rem !important;
+}
+
+.gap-lg {
+  gap: 2rem !important;
+}
+
+.mt-sm {
+  margin-top: 1rem !important;
+}
+
+.mt-md {
+  margin-top: 1.5rem !important;
+}
+
+.mt-lg {
+  margin-top: 2.5rem !important;
+}
+
+.mt-xl {
+  margin-top: 3.5rem !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-xs {
+  margin-bottom: 0.4rem !important;
+}
+
+.mb-sm {
+  margin-bottom: 0.8rem !important;
+}
+
+.mb-md {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-lg {
+  margin-bottom: 2rem !important;
+}
+
+.mb-xl {
+  margin-bottom: 2.5rem !important;
+}
+
+.p-relative {
+  position: relative !important;
+}
+
+.z-index-3 {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* --- Color Utilities --- */
+.color-saffron {
+  color: var(--color-saffron-glow) !important;
+}
+
+.color-gold {
+  color: var(--color-gold-leaf) !important;
+}
+
+.color-crema {
+  color: var(--color-crema) !important;
+}
+
+.color-linen {
+  color: var(--color-linen) !important;
+}
+
+.color-espresso {
+  color: var(--color-espresso) !important;
+}
+
+.color-walnut {
+  color: var(--color-walnut) !important;
+}
+
+.color-onyx {
+  color: var(--color-onyx-warm) !important;
+}
+
+/* --- Section Background Variances --- */
+.bg-dark-section {
+  background: var(--color-midnight-roast) !important;
+  color: var(--color-parchment) !important;
+}
+
+.bg-crema-section {
+  background: var(--color-crema-pure) !important;
+}
+
+.bg-linen-section {
+  background: rgba(216, 203, 184, 0.25) !important;
+}
+
+.bg-linen-section-accent {
+  background: rgba(216, 203, 184, 0.35) !important;
+}
+
+.bg-onyx-section {
+  background: var(--color-onyx-warm) !important;
+  color: var(--color-parchment) !important;
+}
+
+/* --- Max-Width Wrappers --- */
+.max-w-hero {
+  max-width: 860px;
+}
+
+.max-w-cta {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-w-subhead {
+  max-width: 620px;
+}
+
+/* --- Mobile Drawer Specifics --- */
+.drawer-close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-onyx-warm);
+  line-height: 1;
+}
+
+.drawer-footer {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+/* --- Inner Page Header --- */
+.page-hero-header {
+  background: var(--color-midnight-roast);
+  color: var(--color-parchment);
+  padding-top: calc(var(--header-height) + 3.5rem);
+}
+
+.page-hero-title {
+  color: var(--color-crema);
+  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+}
+
+.page-hero-subtext {
+  font-size: 1.25rem;
+  color: var(--color-linen);
+  line-height: 1.7;
+}
+
+/* --- Dock Submit Button --- */
+.dock-submit-btn {
+  height: 44px;
+  white-space: nowrap;
+}
+
+/* --- Room Feature Overrides --- */
+.room-card-featured {
+  border-color: var(--color-saffron-glow) !important;
+}
+
+.room-badge-gold {
+  background: var(--color-saffron-glow) !important;
+  color: #ffffff !important;
+}
+
+/* --- Conditions Banner & Lists --- */
+.conditions-banner {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.conditions-banner-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.conditions-list-horizontal {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--color-espresso);
+}
+
+.conditions-grid-4col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.condition-item {
+  border-left: 3px solid var(--color-saffron-glow);
+  padding-left: 1rem;
+}
+
+.condition-label {
+  font-family: var(--font-stamp);
+  font-size: 0.75rem;
+  color: var(--color-walnut);
+  text-transform: uppercase;
+}
+
+.condition-val {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-onyx-warm);
+}
+
+.rates-callout-box {
+  background: var(--color-crema);
+  padding: 1.5rem;
+  border: 1px dashed var(--color-warm-stone);
+  border-radius: var(--radius-xs);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* --- Gallery 3D Grid --- */
+.gallery-3d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-card-item {
+  height: 280px;
+}
+
+.gallery-card-item-lg {
+  height: 300px;
+}
+
+.gallery-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Rotating Seal Layouts --- */
+.seal-hero-floating {
+  bottom: 20px;
+  right: 20px;
+  width: 160px;
+  height: 160px;
+}
+
+.seal-large-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.seal-large-frame {
+  width: 220px;
+  height: 220px;
+  border-width: 3px;
+}
+
+.seal-large-inner {
+  border-width: 2px;
+}
+
+.seal-large-text {
+  font-size: 10px;
+}
+
+.seal-large-icon {
+  width: 72px;
+  height: 72px;
+}
+
+/* --- Leisure Cards Grid --- */
+.leisure-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.leisure-card-padded {
+  padding: 2rem;
+}
+
+.leisure-media-wrap {
+  height: 240px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+}
+
+.leisure-card-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* --- Forms & Modals Clean Structure --- */
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.addons-box {
+  border: 1px solid var(--color-warm-stone);
+  padding: 1rem;
+  border-radius: var(--radius-xs);
+  background: #ffffff;
+}
+
+.addons-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-walnut);
+  margin-bottom: 0.8rem;
+}
+
+.addon-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.modal-sub-label {
+  font-size: 0.75rem;
+  color: var(--color-walnut);
+}
+
+.modal-phone-help {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-walnut);
+}
+
+/* --- Contact & Hours Specifics --- */
+.contact-hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-hours-card {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-hours-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-hours-status {
+  font-weight: 700;
+  color: var(--color-saffron-glow);
+  font-size: 1.1rem;
+}
+
+.map-card-3d {
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--color-saffron-glow);
+}
+
+.map-iframe {
+  border: 0;
+  filter: contrast(1.05) saturate(0.85);
+  width: 100%;
+  height: 100%;
+}
+
+.map-pin-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(245, 239, 230, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 8px 14px;
+  border: 1px solid var(--color-saffron-glow);
+  border-radius: var(--radius-xs);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-onyx-warm);
+}
+
+.contact-feedback-box {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #e8f5e9;
+  border: 1px solid #81c784;
+  border-radius: var(--radius-xs);
+  color: #2e7d32;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* --- Footer Overrides --- */
+.footer-logo-title {
+  color: var(--color-crema) !important;
+  font-size: 1.8rem !important;
+}
+
+.footer-logo-sub {
+  color: var(--color-gold-leaf) !important;
+}
+
+.footer-cta-wrap {
+  margin-top: 1.5rem;
+}
+
+.footer-address-desc {
+  font-size: 0.9rem;
+  color: var(--color-linen);
+  line-height: 1.6;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .leisure-grid-2col {
+    grid-template-columns: 1fr;
+  }
+  .form-row-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-box-span-all {
+  grid-column: 1 / -1 !important;
+}
+
+.paleo-badge-text {
+  font-size: 0.85rem;
+  font-family: var(--font-stamp);
+  color: var(--color-terracotta);
+  font-weight: 700;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.border-bottom-none {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.border-top-stone {
+  border-top: 1px solid var(--color-warm-stone) !important;
+  padding-top: 1rem !important;
+}
+
+/* ==========================================================================
+   INTERACTIVE 3D WIDGETS & MAXIMALIST SHOWCASE ENHANCEMENTS
+   ========================================================================== */
+
+/* --- Interactive 3D Room Visualizer Widget --- */
+.room-visualizer-container {
+  margin: 3.5rem 0;
+  perspective: 1200px;
+}
+
+.visualizer-nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.visualizer-tab-btn {
+  background: var(--color-crema);
+  border: 1px solid var(--color-warm-stone);
+  padding: 10px 22px;
+  font-family: var(--font-stamp);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-onyx-warm);
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.visualizer-tab-btn:hover,
+.visualizer-tab-btn.active {
+  background: var(--color-onyx-warm);
+  color: var(--color-gold-leaf);
+  border-color: var(--color-saffron-glow);
+  box-shadow: 0 6px 16px rgba(44, 44, 44, 0.25);
+  transform: translateY(-2px);
+}
+
+.visualizer-stage-card {
+  background: #ffffff;
+  border: 1px solid var(--color-saffron-glow);
+  box-shadow: var(--shadow-3d-lg);
+  border-radius: var(--radius-sm);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.visualizer-media-pane {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+}
+
+.visualizer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.visualizer-media-pane:hover .visualizer-img {
+  transform: scale(1.06);
+}
+
+.visualizer-badge-360 {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(31, 28, 25, 0.85);
+  color: var(--color-gold-leaf);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-saffron-glow);
+  backdrop-filter: blur(8px);
+}
+
+.visualizer-info-pane {
+  padding: clamp(1.8rem, 3.5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.visualizer-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+  border-top: 1px dashed var(--color-warm-stone);
+  border-bottom: 1px dashed var(--color-warm-stone);
+  padding: 1.2rem 0;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-label {
+  font-family: var(--font-stamp);
+  font-size: 0.7rem;
+  color: var(--color-walnut);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.spec-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-onyx-warm);
+}
+
+/* --- Gastronomy Interactive Menu Board --- */
+.menu-board-wrap {
+  margin: 3.5rem 0;
+}
+
+.menu-category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.menu-tab-pill {
+  background: var(--glass-beige-light);
+  border: 1px solid var(--color-warm-stone);
+  padding: 10px 24px;
+  font-family: var(--font-stamp);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-onyx-warm);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-tab-pill:hover,
+.menu-tab-pill.active {
+  background: var(--color-saffron-glow);
+  color: #ffffff;
+  border-color: var(--color-saffron-glow);
+  box-shadow: 0 6px 18px rgba(212, 150, 83, 0.35);
+  transform: translateY(-2px);
+}
+
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+}
+
+.menu-dish-card {
+  background: var(--glass-beige-light);
+  border: 1px solid var(--color-warm-stone);
+  padding: 1.6rem;
+  border-radius: var(--radius-xs);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.menu-dish-card:hover {
+  border-color: var(--color-saffron-glow);
+  background: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-3d-md);
+}
+
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+  gap: 1rem;
+}
+
+.dish-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-onyx-warm);
+  line-height: 1.1;
+}
+
+.dish-price {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  white-space: nowrap;
+}
+
+.dish-desc {
+  font-size: 0.88rem;
+  color: var(--color-espresso);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.dish-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.dish-tag-chip {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  background: rgba(212, 150, 83, 0.12);
+  color: var(--color-saffron-glow);
+}
+
+/* --- Paleontological Heritage Experience Guide (Sousa - Vale dos Dinossauros) --- */
+.paleo-guide-board {
+  background: radial-gradient(circle at 80% 20%, rgba(212, 150, 83, 0.15) 0%, transparent 50%),
+              linear-gradient(135deg, #f5efe6 0%, #ebe2d3 100%);
+  border: 1px solid var(--color-saffron-glow);
+  border-radius: var(--radius-sm);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: var(--shadow-3d-lg);
+  margin: 3.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.paleo-timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.paleo-step-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-warm-stone);
+  padding: 1.6rem;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-3d-sm);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.paleo-step-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-saffron-glow);
+  box-shadow: var(--shadow-3d-md);
+}
+
+.paleo-step-dist {
+  font-family: var(--font-stamp);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-saffron-glow);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.paleo-step-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-onyx-warm);
+}
+
+.paleo-step-text {
+  font-size: 0.88rem;
+  color: var(--color-espresso);
+  line-height: 1.55;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .visualizer-stage-card {
+    grid-template-columns: 1fr;
+  }
+  .visualizer-media-pane {
+    height: 300px;
+  }
+}

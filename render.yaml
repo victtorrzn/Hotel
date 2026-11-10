@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: troodon-park-hotel
+    runtime: static
+    branch: main
+    buildCommand: echo "No build step required"
+    staticPublishPath: .

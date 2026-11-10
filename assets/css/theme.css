@@ -1,0 +1,153 @@
+/* ==========================================================================
+   TROODON PARK HOTEL — DESIGN SYSTEM & TOKENS
+   Palette: Maximalist Warm Beige & Saffron Spice with High Depth
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@400;600;700&display=swap');
+
+:root {
+  /* --- The Beige Spectrum (Canvas & Layers) --- */
+  --color-parchment: #d8cbb8;          /* Primary Canvas */
+  --color-parchment-light: #e6dcce;    /* Soft Light Parchment */
+  --color-crema: #f5efe6;              /* Ivory Cream Canvas */
+  --color-crema-pure: #fcf9f4;         /* Pure Light Cream */
+  --color-linen: #bfb4a3;              /* Secondary Surface Tone */
+  --color-warm-stone: #b6ab9c;         /* Structural Hairlines & Borders */
+  --color-sand: #cbbeab;               /* Mid-Sand Layer */
+
+  /* --- Contrast & Type Neutrals --- */
+  --color-walnut: #978e81;             /* Muted Metadata / Sub-labels */
+  --color-espresso: #615b53;           /* Secondary Body Copy */
+  --color-onyx-warm: #2c2c2c;          /* High Contrast Primary Text */
+  --color-midnight-roast: #1f1c19;     /* Deep Shadow / Luxury Dark Surface */
+  --color-night-overlay: rgba(31, 28, 25, 0.78);
+
+  /* --- Maximalist Accents --- */
+  --color-saffron-glow: #d49653;       /* Signature Saffron Spice */
+  --color-saffron-bright: #e7a65d;     /* Radiant Saffron Highlight */
+  --color-gold-leaf: #dfb877;          /* Champagne Gold */
+  --color-gold-dark: #a07835;          /* Aged Bronze */
+  --color-terracotta: #ab5a36;        /* Regional Earth Contrast */
+
+  /* --- 3D Depth Shadows with Warm Undertones --- */
+  --shadow-3d-flat: 0 2px 4px rgba(44, 44, 44, 0.06);
+  --shadow-3d-sm: 0 6px 16px -2px rgba(44, 44, 44, 0.08), 0 2px 6px -1px rgba(97, 91, 83, 0.1);
+  --shadow-3d-md: 0 14px 28px -4px rgba(44, 44, 44, 0.14), 0 8px 14px -6px rgba(97, 91, 83, 0.12);
+  --shadow-3d-lg: 0 24px 48px -8px rgba(31, 28, 25, 0.22), 0 12px 24px -10px rgba(212, 150, 83, 0.18);
+  --shadow-3d-hover: 0 35px 70px -12px rgba(31, 28, 25, 0.32), 0 18px 30px -8px rgba(212, 150, 83, 0.28);
+  --shadow-inset-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -1px 2px rgba(44, 44, 44, 0.15);
+  --shadow-gold-glow: 0 0 25px rgba(212, 150, 83, 0.45), 0 0 50px rgba(223, 184, 119, 0.2);
+
+  /* --- Typography Families --- */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-serif-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-stamp: 'Cinzel', serif;
+
+  /* --- Layout & Spacing --- */
+  --max-width: 1440px;
+  --header-height: 90px;
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+
+  /* --- Glassmorphism Surfaces --- */
+  --glass-beige-light: rgba(245, 239, 230, 0.85);
+  --glass-beige-mid: rgba(216, 203, 184, 0.75);
+  --glass-dark: rgba(31, 28, 25, 0.82);
+  --glass-border: 1px solid rgba(223, 184, 119, 0.35);
+  --glass-border-light: 1px solid rgba(255, 255, 255, 0.55);
+
+  /* --- Transitions --- */
+  --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-3d: 0.6s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+/* ==========================================================================
+   RESET & FOUNDATION
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-crema);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-onyx-warm);
+  background: var(--color-crema);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(212, 150, 83, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(171, 90, 54, 0.04) 0%, transparent 40%),
+    linear-gradient(to bottom, #fcf9f4 0%, #f5efe6 30%, #e6dcce 70%, #d8cbb8 100%);
+  line-height: 1.55;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Subtle maximalist textured background overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(var(--color-warm-stone) 0.65px, transparent 0.65px);
+  background-size: 24px 24px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Base Headings (Whisper-weight luxury serif) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  color: var(--color-onyx-warm);
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+}
+
+p {
+  color: var(--color-espresso);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-saffron-glow);
+  color: #fff;
+}

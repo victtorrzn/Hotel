@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troodon Park Hotel — Sousa, Paraíba | Hospedagem, Gastronomia e Lazer</title>
+  <meta name="description" content="Sua pausa merecida começa aqui. Conheça o Troodon Park Hotel em Sousa-PB: acomodações Standard, Luxo e Flats mobiliados, piscina na cobertura com bar molhado e restaurante à la carte.">
+  
+  <!-- CSS Stylesheets Separados -->
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/3d-effects.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Three.js CDN for 3D Hero Ambient Geometry -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Troodon Park Hotel">
+        <div class="logo-symbol">
+          <!-- Stylized Troodon Dino Silhouette SVG -->
+          <svg viewBox="0 0 100 100" fill="currentColor">
+            <path d="M78 28 C74 22 62 18 52 20 C42 22 36 28 32 35 C28 42 22 48 14 54 C10 57 8 62 10 66 C12 70 18 70 24 67 C30 64 36 60 42 60 C46 60 48 64 48 70 C48 76 44 82 40 88 C46 88 52 84 56 78 C60 72 62 66 64 60 C70 60 76 64 82 70 C84 72 88 70 88 66 C88 58 84 50 82 44 C80 38 82 32 78 28 Z M58 32 C60 32 62 34 62 36 C62 38 60 40 58 40 C56 40 54 38 54 36 C54 34 56 32 58 32 Z" />
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">Troodon</span>
+          <span class="logo-subtitle">Park Hotel • Sousa PB</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link active">Início</a>
+        <a href="pages/servicos.html" class="nav-link">Serviços</a>
+        <a href="pages/sobre.html" class="nav-link">Sobre</a>
+        <a href="pages/contato.html" class="nav-link">Contato</a>
+        <a href="pages/faq.html" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Action Group -->
+      <div class="header-actions">
+        <a href="#reservas" class="btn btn-ghost btn-open-booking" data-room="standard">Fazer Reserva</a>
+        <button class="mobile-toggle" aria-label="Abrir menu de navegação">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <div class="drawer-header">
+      <div class="logo-text-group">
+        <span class="logo-title">Troodon</span>
+        <span class="logo-subtitle">Park Hotel</span>
+      </div>
+      <button class="drawer-close drawer-close-btn" aria-label="Fechar menu">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="index.html" class="drawer-link active">Início</a>
+      <a href="pages/servicos.html" class="drawer-link">Serviços</a>
+      <a href="pages/sobre.html" class="drawer-link">Sobre</a>
+      <a href="pages/contato.html" class="drawer-link">Contato</a>
+      <a href="pages/faq.html" class="drawer-link">FAQ</a>
+    </div>
+    <div class="drawer-footer">
+      <a href="#reservas" class="btn btn-gold btn-open-booking w-100">Fazer Reserva Agora</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= 1. HERO SECTION & 3D STAGE ================= -->
+    <section class="hero-stage perspective-viewport">
+      <div class="hero-background-media">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=80" alt="Fachada elegante e recepção do Troodon Park Hotel" class="hero-bg-img">
+        <div class="hero-gradient-overlay"></div>
+      </div>
+
+      <!-- 3D Three.js Interactive Canvas for Amber Fossil Gemstone & Sertão Dust -->
+      <canvas id="hero3dCanvas"></canvas>
+
+      <div class="container z-index-3">
+        <div class="hero-content">
+          <div class="hero-stamp-badge">
+            <span>Sousa • Paraíba</span>
+            <span class="color-saffron">♦</span>
+            <span>Vale dos Dinossauros</span>
+          </div>
+
+          <h1 class="hero-title">
+            Sua pausa <br>
+            <span class="italic-accent text-shimmer-gold">merecida</span> <br>
+            começa aqui.
+          </h1>
+
+          <p class="hero-description">
+            Hospedagem, gastronomia e lazer no Troodon Park Hotel, em Sousa, na Paraíba. Uma experiência acolhedora que une sofisticação, conforto e identidade regional.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-gold btn-lg btn-open-booking" data-room="standard">
+              Consultar Disponibilidade
+            </button>
+            <a href="pages/sobre.html" class="btn btn-ghost-light btn-lg">
+              Conhecer o Hotel
+            </a>
+          </div>
+
+          <!-- Live Sousa PB Info Capsule -->
+          <div class="mt-lg">
+            <div class="widget-sousa-info">
+              <span class="widget-live-dot"></span>
+              <span><strong>Sousa-PB:</strong> <span id="liveSousaClock">--:--:--</span></span>
+              <span>|</span>
+              <span id="liveSousaTemp">31°C Ensolarado</span>
+              <span>|</span>
+              <span>Recepção 24h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. 3D FLOATING BOOKING DOCK ENGINE ================= -->
+    <div class="container booking-dock-wrapper" id="reservas">
+      <div class="booking-dock" id="homeBookingDock">
+        <div class="booking-dock-field">
+          <label class="booking-label" for="dockCheckin">
+            <span>📅</span> Check-in
+          </label>
+          <input type="date" id="dockCheckin" class="booking-input" required>
+        </div>
+
+        <div class="booking-dock-field">
+          <label class="booking-label" for="dockCheckout">
+            <span>📅</span> Check-out
+          </label>
+          <input type="date" id="dockCheckout" class="booking-input" required>
+        </div>
+
+        <div class="booking-dock-field">
+          <label class="booking-label" for="dockRoom">
+            <span>🛏️</span> Acomodação
+          </label>
+          <select id="dockRoom" class="booking-select">
+            <option value="standard">Standard Duplo (R$ 220)</option>
+            <option value="luxo">Quarto Luxo Premium (R$ 340)</option>
+            <option value="flat">Flat Mobiliado Completo (R$ 420)</option>
+          </select>
+        </div>
+
+        <div class="booking-dock-field">
+          <label class="booking-label" for="dockGuests">
+            <span>👥</span> Hóspedes
+          </label>
+          <select id="dockGuests" class="booking-select">
+            <option value="1 Hóspede">1 Adulto</option>
+            <option value="2 Hóspedes" selected>2 Adultos</option>
+            <option value="3 Hóspedes">3 Hóspedes (Família)</option>
+            <option value="4+ Hóspedes">4+ Hóspedes (Grupo)</option>
+          </select>
+        </div>
+
+        <button class="btn btn-saffron dock-submit-btn" id="btnDockSubmit">
+          Calcular & Reservar
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= 3. MAXIMALIST MOVING MARQUEE ================= -->
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> TROODON PARK HOTEL</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> SOUSA — PARAÍBA</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> RECEPÇÃO 24 HORAS</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> PISCINA NA COBERTURA & BAR MOLHADO</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> CAFÉ DA MANHÃ REGIONAL INCLUSO</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> RESTAURANTE À LA CARTE</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> FLATS MOBILIADOS</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> VALE DOS DINOSSAUROS</span>
+        <!-- Duplicated for seamless loop -->
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> TROODON PARK HOTEL</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> SOUSA — PARAÍBA</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> RECEPÇÃO 24 HORAS</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> PISCINA NA COBERTURA & BAR MOLHADO</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> CAFÉ DA MANHÃ REGIONAL INCLUSO</span>
+        <span class="marquee-item"><span class="marquee-bullet">✦</span> RESTAURANTE À LA CARTE</span>
+      </div>
+    </div>
+
+    <!-- ================= 4. APRESENTAÇÃO INSTITUCIONAL ================= -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="split-feature-showcase">
+          <!-- Text column -->
+          <div>
+            <div class="section-kicker">Hospitalidade no Sertão</div>
+            <h2 class="section-title">Conheça o Troodon Park Hotel.</h2>
+            <p class="section-subtitle mb-md">
+              O Troodon Park Hotel reúne diferentes serviços em um só empreendimento. São opções de hospedagem, restaurante à la carte, flats mobiliados e área de lazer com piscina na cobertura e bar molhado.
+            </p>
+            <p class="mb-lg">
+              Uma estrutura moderna e aconchegante desenhada para atender turistas em busca das maravilhas do Vale dos Dinossauros, profissionais em viagens corporativas e moradores locais que apreciam boa gastronomia e lazer exclusivo.
+            </p>
+            <div class="d-flex gap-md flex-wrap align-center">
+              <a href="pages/servicos.html" class="btn btn-ghost">Conhecer nossos serviços</a>
+              <a href="pages/sobre.html" class="service-link">Ler sobre nossa história &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 3D Seal & Image Stack -->
+          <div class="feature-media-stack perspective-viewport">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80" alt="Suíte e conforto Troodon Park Hotel" class="feature-main-img card-3d">
+            
+            <!-- 3D Interactive Rotating Seal -->
+            <div class="seal-troodon-3d feature-floating-card animate-float seal-hero-floating">
+              <div class="seal-inner-ring">
+                <span class="seal-text-circular">TROODON • SOUSA</span>
+                <svg class="seal-icon-troodon" viewBox="0 0 100 100" fill="#d49653">
+                  <path d="M78 28 C74 22 62 18 52 20 C42 22 36 28 32 35 C28 42 22 48 14 54 C10 57 8 62 10 66 C12 70 18 70 24 67 C30 64 36 60 42 60 C46 60 48 64 48 70 C48 76 44 82 40 88 C46 88 52 84 56 78 C60 72 62 66 64 60 C70 60 76 64 82 70 C84 72 88 70 88 66 C88 58 84 50 82 44 C80 38 82 32 78 28 Z" />
+                </svg>
+                <span class="seal-text-circular">PARK HOTEL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider-hairline">
+
+    <!-- ================= 5. NOSSOS SERVIÇOS (4 CARDS) ================= -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">Experiências Integradas</div>
+          <h2 class="section-title">O que você encontra no Troodon.</h2>
+          <p class="section-subtitle">
+            Estrutura completa que combina o acolhimento paraibano com a praticidade de ter hospedagem, culinária e diversão em um só destino.
+          </p>
+        </div>
+
+        <div class="services-spread-grid">
+          <!-- Card 1 — Hospedagem -->
+          <div class="service-box-3d card-3d">
+            <span class="service-number">01</span>
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+            </div>
+            <h3 class="service-name">Hospedagem</h3>
+            <p class="service-text">
+              Quartos Standard e Luxo, além de flats mobiliados para estadias prolongadas com total privacidade e comodidade.
+            </p>
+            <a href="pages/servicos.html#hospedagem" class="service-link">Ver acomodações &rarr;</a>
+          </div>
+
+          <!-- Card 2 — Gastronomia -->
+          <div class="service-box-3d card-3d">
+            <span class="service-number">02</span>
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+            </div>
+            <h3 class="service-name">Gastronomia</h3>
+            <p class="service-text">
+              Restaurante à la carte sofisticado e café da manhã regional servido diariamente, valorizando os sabores autênticos da Paraíba.
+            </p>
+            <a href="pages/servicos.html#gastronomia" class="service-link">Conhecer o restaurante &rarr;</a>
+          </div>
+
+          <!-- Card 3 — Lazer -->
+          <div class="service-box-3d card-3d">
+            <span class="service-number">03</span>
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M21 16.5c-1.3 0-2.4-.6-3.1-1.5-.7.9-1.8 1.5-3.1 1.5s-2.4-.6-3.1-1.5c-.7.9-1.8 1.5-3.1 1.5s-2.4-.6-3.1-1.5c-.7.9-1.8 1.5-3.1 1.5v2c1.7 0 3.2-.8 4.1-2 .9 1.2 2.4 2 4.1 2s3.2-.8 4.1-2c.9 1.2 2.4 2 4.1 2s3.2-.8 4.1-2c.9 1.2 2.4 2 4.1 2v-2zM21 12c-1.3 0-2.4-.6-3.1-1.5-.7.9-1.8 1.5-3.1 1.5s-2.4-.6-3.1-1.5c-.7.9-1.8 1.5-3.1 1.5s-2.4-.6-3.1-1.5c-.7.9-1.8 1.5-3.1 1.5v2c1.7 0 3.2-.8 4.1-2 .9 1.2 2.4 2 4.1 2s3.2-.8 4.1-2c.9 1.2 2.4 2 4.1 2s3.2-.8 4.1-2c.9 1.2 2.4 2 4.1 2v-2zM15 7.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S17.33 9 16.5 9 15 8.33 15 7.5zM6.8 9.2L8.5 7.5l4.3 4.3 2.1-2.1-4.3-4.3 1.7-1.7c.4-.4.4-1 0-1.4l-1.4-1.4c-.4-.4-1-.4-1.4 0L3.5 6.9c-.4.4-.4 1 0 1.4l1.9 1.9c.4.4 1 .4 1.4-1z"/></svg>
+            </div>
+            <h3 class="service-name">Lazer</h3>
+            <p class="service-text">
+              Piscina panorâmica na cobertura e bar molhado com coquetéis autorais e vista espetacular do pôr do sol em Sousa.
+            </p>
+            <a href="pages/servicos.html#lazer" class="service-link">Ver área de lazer &rarr;</a>
+          </div>
+
+          <!-- Card 4 — Eventos -->
+          <div class="service-box-3d card-3d">
+            <span class="service-number">04</span>
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+            </div>
+            <h3 class="service-name">Eventos</h3>
+            <p class="service-text">
+              O hotel também atua no segmento de eventos corporativos e celebrações sociais. Consulte a equipe sobre os serviços e espaços disponíveis.
+            </p>
+            <a href="pages/servicos.html#eventos" class="service-link">Solicitar informações &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. DESTAQUE DE HOSPEDAGEM ================= -->
+    <section class="section-padding bg-linen-section">
+      <div class="container">
+        <div class="section-header text-left">
+          <div class="section-kicker">Acomodações & Conforto</div>
+          <h2 class="section-title">Escolha sua acomodação.</h2>
+          <p class="section-subtitle">
+            O hotel disponibiliza quartos nas categorias Standard e Luxo, além de flats mobiliados para quem precisa de uma opção de estadia prolongada.
+          </p>
+        </div>
+
+        <!-- Room Cards Showcase with 3D Depth -->
+        <div class="rooms-grid perspective-viewport">
+          
+          <!-- Quarto Standard -->
+          <div class="room-card-3d">
+            <div class="room-media">
+              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Quarto Standard Duplo Troodon Park Hotel" class="room-img">
+              <span class="room-badge-category">Standard</span>
+              <div class="room-price-tag">
+                <span>Diária média</span> <br>
+                <strong class="room-price-val">R$ 180 a R$ 260</strong>
+              </div>
+            </div>
+            <div class="room-body">
+              <h3 class="room-title">Quarto Standard Duplo</h3>
+              <p class="room-desc">
+                Acomodação prática e funcional, perfeita para quem busca ótimo custo-benefício em viagens rápidas ou corporativas.
+              </p>
+              <div class="room-amenities">
+                <span class="amenity-chip">✓ Café incluso</span>
+                <span class="amenity-chip">✓ Wi-Fi 24h</span>
+                <span class="amenity-chip">✓ Ar-condicionado</span>
+                <span class="amenity-chip">✓ Recepção 24h</span>
+              </div>
+              <div class="room-actions">
+                <button class="btn btn-saffron btn-sm btn-open-booking" data-room="standard">Reservar Este</button>
+                <a href="pages/servicos.html#standard" class="btn btn-ghost btn-sm">Detalhes</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quarto Luxo -->
+          <div class="room-card-3d room-card-featured">
+            <div class="room-media">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Quarto Luxo Troodon Park Hotel" class="room-img">
+              <span class="room-badge-category room-badge-gold">Destaque • Luxo</span>
+              <div class="room-price-tag">
+                <span>Sob consulta</span> <br>
+                <strong class="room-price-val">A partir de R$ 340</strong>
+              </div>
+            </div>
+            <div class="room-body">
+              <h3 class="room-title">Quarto Luxo Premium</h3>
+              <p class="room-desc">
+                Uma categoria de acomodação superior com detalhes refinados, cama king-size, enxoval nobre e acabamento premium.
+              </p>
+              <div class="room-amenities">
+                <span class="amenity-chip">✓ Café incluso</span>
+                <span class="amenity-chip">✓ Frigobar abastecido</span>
+                <span class="amenity-chip">✓ Ducha aquecida</span>
+                <span class="amenity-chip">✓ Vista ampla</span>
+              </div>
+              <div class="room-actions">
+                <button class="btn btn-saffron btn-sm btn-open-booking" data-room="luxo">Reservar Este</button>
+                <a href="pages/servicos.html#luxo" class="btn btn-ghost btn-sm">Detalhes</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flats Mobiliados -->
+          <div class="room-card-3d">
+            <div class="room-media">
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80" alt="Flat Mobiliado Troodon Park Hotel" class="room-img">
+              <span class="room-badge-category">Estadia Prolongada</span>
+              <div class="room-price-tag">
+                <span>Condições especiais</span> <br>
+                <strong class="room-price-val">Flats Mobiliados</strong>
+              </div>
+            </div>
+            <div class="room-body">
+              <h3 class="room-title">Flats Mobiliados</h3>
+              <p class="room-desc">
+                Apartamentos completos com ambiente integrado de sala e cozinha para profissionais em long stays ou famílias que precisam de independência.
+              </p>
+              <div class="room-amenities">
+                <span class="amenity-chip">✓ Cozinha equipada</span>
+                <span class="amenity-chip">✓ Sala de estar</span>
+                <span class="amenity-chip">✓ Limpeza inclusa</span>
+                <span class="amenity-chip">✓ Wi-Fi dedicado</span>
+              </div>
+              <div class="room-actions">
+                <button class="btn btn-saffron btn-sm btn-open-booking" data-room="flat">Consultar Flat</button>
+                <a href="pages/servicos.html#flats" class="btn btn-ghost btn-sm">Detalhes</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Banner Info Check-in & CTA -->
+        <div class="ornament-frame conditions-banner">
+          <div>
+            <h4 class="conditions-banner-title">Condições Essenciais de Estadia</h4>
+            <ul class="conditions-list-horizontal">
+              <li><strong>Café da manhã:</strong> 06h30 às 09h30 (incluso)</li>
+              <li><strong>Check-in:</strong> a partir das 14h</li>
+              <li><strong>Check-out:</strong> até as 12h</li>
+              <li><strong>Recepção:</strong> 24 horas</li>
+            </ul>
+          </div>
+          <button class="btn btn-gold btn-open-booking" data-room="standard">Consultar Tarifas e Disponibilidade</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. GASTRONOMIA E LAZER ================= -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="split-feature-showcase">
+          <!-- Image Layer -->
+          <div class="feature-media-stack perspective-viewport">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1000&q=80" alt="Piscina na cobertura e bar molhado do Troodon Park Hotel" class="feature-main-img card-3d">
+            <div class="feature-floating-card">
+              <h4>Bar Molhado</h4>
+              <p>Drinks autorais, petiscos e drinks tropicais servidos direto na água ao entardecer.</p>
+            </div>
+          </div>
+
+          <!-- Content Layer -->
+          <div>
+            <div class="section-kicker">Momentos Inesquecíveis</div>
+            <h2 class="section-title">Restaurante e área de lazer.</h2>
+            <p class="section-subtitle mb-md">
+              Além da hospedagem, o Troodon Park Hotel conta com restaurante à la carte, piscina na cobertura e bar molhado.
+            </p>
+            <p class="mb-lg">
+              Desfrute do nosso café da manhã regional farto — com cuscuz, queijo de coalho tostado, frutas da época, sucos naturais e tapiocas preparadas na hora. Ao longo do dia e à noite, o restaurante oferece cardápio à la carte com o melhor da cozinha brasileira e sertaneja, enquanto o terraço panorâmico convida ao descanso absoluto.
+            </p>
+            <div class="d-flex gap-md flex-wrap">
+              <a href="pages/servicos.html#lazer" class="btn btn-ghost">Conhecer os espaços</a>
+              <a href="https://wa.me/5583991590232?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20o%20restaurante%20e%20a%20piscina%20do%20hotel" target="_blank" class="btn btn-saffron">Reservar Mesa / Bar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. ESTRUTURA DO HOTEL (GALERIA 3D) ================= -->
+    <section class="section-padding bg-crema-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">Ambientes e Atmosfera</div>
+          <h2 class="section-title">Estrutura do hotel.</h2>
+          <p class="section-subtitle">
+            Galeria de fotografias das acomodações, restaurante, piscina, bar molhado e demais ambientes pensados para o seu bem-estar.
+          </p>
+        </div>
+
+        <div class="gallery-3d-grid perspective-viewport">
+          <div class="card-3d gallery-card-item">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="Restaurante à la carte" class="gallery-img-cover">
+          </div>
+          <div class="card-3d gallery-card-item">
+            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=700&q=80" alt="Café da Manhã Regional" class="gallery-img-cover">
+          </div>
+          <div class="card-3d gallery-card-item">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=700&q=80" alt="Drinks no Bar Molhado" class="gallery-img-cover">
+          </div>
+          <div class="card-3d gallery-card-item">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=700&q=80" alt="Espaços para Eventos" class="gallery-img-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. DEPOIMENTOS DE HÓSPEDES ================= -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">Experiência Comprovada</div>
+          <h2 class="section-title">O que dizem nossos hóspedes.</h2>
+          <p class="section-subtitle">
+            A satisfação de quem viveu a hospitalidade do Troodon Park Hotel em Sousa-PB.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Depoimento 1 -->
+          <div class="testimonial-card-3d card-3d">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "Hotel excelente! A piscina na cobertura com o bar molhado foi a melhor surpresa da viagem a Sousa após visitar as pegadas no Vale dos Dinossauros. Café regional impecável."
+            </p>
+            <div class="testimonial-author-group">
+              <div>
+                <div class="author-name">Marcelo Cavalcanti</div>
+                <div class="author-origin">Turista de Lazer • Recife-PE</div>
+              </div>
+              <span class="author-badge">Google 5.0</span>
+            </div>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="testimonial-card-3d card-3d">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "Fiquei hospedado por 15 dias nos flats mobiliados a trabalho. Estrutura impecável, recepção 24h super prestativa e internet muito estável. Indico com certeza."
+            </p>
+            <div class="testimonial-author-group">
+              <div>
+                <div class="author-name">Dra. Renata Albuquerque</div>
+                <div class="author-origin">Estadia Corporativa • João Pessoa-PB</div>
+              </div>
+              <span class="author-badge">Booking 9.4</span>
+            </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="testimonial-card-3d card-3d">
+            <div class="stars-row">★★★★★</div>
+            <p class="testimonial-quote">
+              "Ambiente acolhedor, restaurante à la carte delicioso e quartos confortáveis com ar bem silencioso. Atendimento nota 10 de toda a equipe do Troodon."
+            </p>
+            <div class="testimonial-author-group">
+              <div>
+                <div class="author-name">Rodrigo & Família</div>
+                <div class="author-origin">Viagem em Família • Fortaleza-CE</div>
+              </div>
+              <span class="author-badge">TripAdvisor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 10. CTA FINAL ================= -->
+    <section class="section-padding bg-onyx-section">
+      <div class="container text-center max-w-cta">
+        <div class="section-kicker color-gold">Sua Estadia em Sousa</div>
+        <h2 class="section-title color-crema">Planeje sua hospedagem.</h2>
+        <p class="page-hero-subtext mb-xl">
+          Consulte as opções de acomodação, valores e disponibilidade diretamente com nossa equipe. Estamos prontos para receber você com a melhor hospitalidade paraibana.
+        </p>
+        <div class="d-flex gap-md justify-center flex-wrap">
+          <button class="btn btn-gold btn-lg btn-open-booking" data-room="standard">Fazer Reserva</button>
+          <a href="https://wa.me/5583991590232?text=Ol%C3%A1,%20gostaria%20de%20consultar%20disponibilidade%20no%20Troodon%20Park%20Hotel" target="_blank" class="btn btn-ghost-light btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div>
+          <div class="logo-text-group">
+            <span class="logo-title footer-logo-title">Troodon</span>
+            <span class="logo-subtitle footer-logo-sub">Park Hotel • Sousa-PB</span>
+          </div>
+          <p class="footer-brand-desc">
+            Hospedagem, gastronomia e lazer em Sousa-PB. Estrutura moderna inspirada na identidade paleontológica do Vale dos Dinossauros.
+          </p>
+          <div class="footer-cta-wrap">
+            <a href="#reservas" class="btn btn-gold btn-sm btn-open-booking">Fazer Reserva</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="footer-heading">Navegação</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pages/servicos.html">Serviços</a></li>
+            <li><a href="pages/sobre.html">Sobre o Hotel</a></li>
+            <li><a href="pages/contato.html">Contato</a></li>
+            <li><a href="pages/faq.html">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Atendimento -->
+        <div>
+          <h4 class="footer-heading">Atendimento</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <div>
+              <a href="https://wa.me/5583991590232" target="_blank">(83) 99159-0232</a> <br>
+              <a href="https://wa.me/5583991180412" target="_blank">(83) 99118-0412</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <div>Recepção 24 Horas</div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <div><a href="https://instagram.com/troodonhotel" target="_blank">@troodonhotel</a></div>
+          </div>
+        </div>
+
+        <!-- Col 4: Endereço & Localização -->
+        <div>
+          <h4 class="footer-heading">Endereço</h4>
+          <p class="footer-address-desc">
+            Rua Ana Neri, 12 – Bairro Gato Preto<br>
+            Sousa – PB, CEP 58802-070<br>
+            Próximo aos atrativos e ao Vale dos Dinossauros.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          © Troodon Park Hotel. Todos os direitos reservados.
+        </div>
+        <div class="d-flex gap-md">
+          <span>Sousa • Paraíba</span>
+          <span>•</span>
+          <span>Design Maximalista Bege 3D</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING VIP CONCIERGE DOCK ================= -->
+  <div class="floating-concierge">
+    <div class="concierge-pill">
+      <span>VIP Concierge Online</span>
+    </div>
+    <a href="https://wa.me/5583991590232?text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20o%20atendimento%20do%20Troodon%20Park%20Hotel" target="_blank" class="concierge-btn-3d" aria-label="WhatsApp Concierge">
+      💬
+    </a>
+  </div>
+
+  <!-- Ambient Sound Generator Toggle Widget -->
+  <div class="widget-sound-ambient" id="soundAmbientWidget" title="Ativar Som Ambiente e Cliques">
+    <div class="sound-waves paused">
+      <div class="sound-wave-bar"></div>
+      <div class="sound-wave-bar"></div>
+      <div class="sound-wave-bar"></div>
+      <div class="sound-wave-bar"></div>
+    </div>
+    <span>Som Cristalino</span>
+  </div>
+
+  <!-- ================= INTERACTIVE BOOKING ENGINE MODAL ================= -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="section-kicker color-gold mb-xs">Simulador de Tarifas</div>
+          <h3>Consultar Reserva</h3>
+        </div>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="modalCheckin">Data de Check-in (a partir 14h)</label>
+            <input type="date" id="modalCheckin" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalCheckout">Data de Check-out (até 12h)</label>
+            <input type="date" id="modalCheckout" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="modalRoom">Categoria de Acomodação</label>
+            <select id="modalRoom" class="form-control">
+              <option value="standard">Quarto Standard Duplo (R$ 220/noite)</option>
+              <option value="luxo">Quarto Luxo Premium (R$ 340/noite)</option>
+              <option value="flat">Flat Mobiliado Completo (R$ 420/noite)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalGuests">Número de Hóspedes</label>
+            <select id="modalGuests" class="form-control">
+              <option value="1 Adulto">1 Adulto</option>
+              <option value="2 Adultos" selected>2 Adultos</option>
+              <option value="3 Hóspedes">3 Hóspedes</option>
+              <option value="4 Hóspedes">4 Hóspedes</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Optional Experiences -->
+        <div class="addons-box">
+          <div class="addons-title">
+            Experiências Opcionais
+          </div>
+          <label class="addon-label mb-xs">
+            <input type="checkbox" id="addonTour">
+            <span>Transfer & Passeio Guiado ao Vale dos Dinossauros (+ R$ 90)</span>
+          </label>
+          <label class="addon-label">
+            <input type="checkbox" id="addonBasket">
+            <span>Cesta de Boas-Vindas com Doces & Frutas Regionais (+ R$ 75)</span>
+          </label>
+        </div>
+
+        <!-- Live Calculation Box -->
+        <div class="calc-summary-box">
+          <div>
+            <div class="calc-label">Total Estimado (<span id="modalNightsCount">2 diárias</span>)</div>
+            <div class="modal-sub-label">Café da manhã regional incluso</div>
+          </div>
+          <div class="calc-price-big" id="modalTotalPrice">R$ 440,00</div>
+        </div>
+
+        <button class="btn btn-gold btn-lg w-100" id="btnSubmitWhatsApp">
+          Concluir via WhatsApp Oficial &rarr;
+        </button>
+
+        <div class="modal-phone-help">
+          Ou ligue diretamente: (83) 99159-0232 • (83) 99118-0412 (24 horas)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tilt-3d.js"></script>
+  <script src="assets/js/three-scene.js"></script>
+  <script src="assets/js/booking-system.js"></script>
+</body>
+</html>

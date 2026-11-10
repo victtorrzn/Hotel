@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Troodon Park Hotel | Dúvidas Frequentes sobre Hospedagem e Serviços</title>
+  <meta name="description" content="Perguntas frequentes do Troodon Park Hotel em Sousa-PB: check-in, check-out, café da manhã regional, piscina na cobertura, bar molhado e tarifas.">
+  
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/3d-effects.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="Troodon Park Hotel">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 100 100" fill="currentColor">
+            <path d="M78 28 C74 22 62 18 52 20 C42 22 36 28 32 35 C28 42 22 48 14 54 C10 57 8 62 10 66 C12 70 18 70 24 67 C30 64 36 60 42 60 C46 60 48 64 48 70 C48 76 44 82 40 88 C46 88 52 84 56 78 C60 72 62 66 64 60 C70 60 76 64 82 70 C84 72 88 70 88 66 C88 58 84 50 82 44 C80 38 82 32 78 28 Z M58 32 C60 32 62 34 62 36 C62 38 60 40 58 40 C56 40 54 38 54 36 C54 34 56 32 58 32 Z" />
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">Troodon</span>
+          <span class="logo-subtitle">Park Hotel • Sousa PB</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="../index.html" class="nav-link">Início</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="sobre.html" class="nav-link">Sobre</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#bookingModal" class="btn btn-ghost btn-open-booking" data-room="standard">Fazer Reserva</a>
+        <button class="mobile-toggle" aria-label="Abrir menu de navegação">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer">
+    <div class="drawer-header">
+      <div class="logo-text-group">
+        <span class="logo-title">Troodon</span>
+        <span class="logo-subtitle">Park Hotel</span>
+      </div>
+      <button class="drawer-close drawer-close-btn" aria-label="Fechar menu">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="../index.html" class="drawer-link">Início</a>
+      <a href="servicos.html" class="drawer-link">Serviços</a>
+      <a href="sobre.html" class="drawer-link">Sobre</a>
+      <a href="contato.html" class="drawer-link">Contato</a>
+      <a href="faq.html" class="drawer-link active">FAQ</a>
+    </div>
+    <div class="drawer-footer">
+      <a href="#bookingModal" class="btn btn-gold btn-open-booking w-100">Fazer Reserva Agora</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= 1. HERO FAQ ================= -->
+    <section class="section-padding bg-dark-section page-hero-header">
+      <div class="container text-center max-w-hero">
+        <div class="section-kicker color-gold">Tire Suas Dúvidas</div>
+        <h1 class="section-title page-hero-title">
+          Perguntas frequentes.
+        </h1>
+        <p class="page-hero-subtext mb-lg">
+          Confira as principais informações sobre hospedagem e serviços do Troodon Park Hotel.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 2. ACORDEÃO INTERATIVO COM BUSCA ================= -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="faq-container">
+          
+          <!-- Search box -->
+          <div class="faq-search-box">
+            <span class="faq-search-icon">🔍</span>
+            <input type="text" id="faqSearchInput" class="faq-search-input" placeholder="Pesquisar dúvida (ex: café da manhã, check-in, piscina, flat...)" oninput="filterFaq();">
+          </div>
+
+          <!-- Categoria: Hospedagem -->
+          <div class="mb-xl">
+            <div class="section-kicker">1. Hospedagem</div>
+            
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">Quais são as opções de acomodação?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>O hotel oferece quartos Standard e Luxo, além de flats mobiliados para estadias prolongadas.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">Qual é o horário de check-in?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>A entrada nas acomodações começa a partir das 14h.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">Qual é o horário de check-out?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>A saída deve ocorrer até as 12h.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">O café da manhã está incluso na diária?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Sim. O café da manhã regional está incluso nas diárias.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">Qual é o horário do café da manhã?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Das 06h30 às 09h30 diariamente.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">A recepção funciona 24 horas?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Sim. A recepção funciona durante todo o dia e noite, oferecendo atendimento e segurança ininterruptos.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoria: Gastronomia e Lazer -->
+          <div class="mb-xl">
+            <div class="section-kicker">2. Gastronomia e Lazer</div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">O hotel possui restaurante?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Sim. O empreendimento conta com restaurante à la carte oferecendo pratos da culinária regional paraibana e receitas contemporâneas.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">Quais são as opções de lazer?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>O hotel dispõe de piscina na cobertura e bar molhado com espreguiçadeiras e serviço de bebidas e petiscos.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoria: Reservas -->
+          <div class="mb-xl">
+            <div class="section-kicker">3. Reservas</div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">Como consultar os valores das diárias?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>As tarifas variam conforme a temporada e a categoria da acomodação. Consulte os valores atualizados diretamente com a equipe pelos canais de atendimento ou pelo simulador de reservas no site.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question-btn" onclick="toggleFaq(this)">
+                <span class="faq-question-text">Como realizar uma reserva?</span>
+                <span class="faq-toggle-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Entre em contato pelos telefones e WhatsApp disponibilizados no site ou consulte os canais parceiros de reserva como Booking e Expedia.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. CTA FINAL FAQ ================= -->
+    <section class="section-padding bg-onyx-section">
+      <div class="container text-center max-w-cta">
+        <div class="section-kicker color-gold">Dúvidas Adicionais</div>
+        <h2 class="section-title color-crema">Não encontrou sua resposta?</h2>
+        <p class="page-hero-subtext mb-xl">
+          Entre em contato com nossa equipe para esclarecer suas dúvidas sobre hospedagem, reservas e passeios ao Vale dos Dinossauros.
+        </p>
+        <div class="d-flex gap-md justify-center flex-wrap">
+          <a href="https://wa.me/5583991590232?text=Ol%C3%A1,%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20hotel" target="_blank" class="btn btn-gold btn-lg">Falar pelo WhatsApp</a>
+          <button class="btn btn-ghost-light btn-lg btn-open-booking" data-room="standard">Fazer Reserva</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div>
+          <div class="logo-text-group">
+            <span class="logo-title footer-logo-title">Troodon</span>
+            <span class="logo-subtitle footer-logo-sub">Park Hotel • Sousa-PB</span>
+          </div>
+          <p class="footer-brand-desc">
+            Hospedagem, gastronomia e lazer em Sousa-PB. Estrutura moderna inspirada na identidade paleontológica do Vale dos Dinossauros.
+          </p>
+          <div class="footer-cta-wrap">
+            <button class="btn btn-gold btn-sm btn-open-booking">Fazer Reserva</button>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navegação</h4>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre o Hotel</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="faq.html">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Atendimento</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <div>
+              <a href="https://wa.me/5583991590232" target="_blank">(83) 99159-0232</a> <br>
+              <a href="https://wa.me/5583991180412" target="_blank">(83) 99118-0412</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <div>Recepção 24 Horas</div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <div><a href="https://instagram.com/troodonhotel" target="_blank">@troodonhotel</a></div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Endereço</h4>
+          <p class="footer-address-desc">
+            Rua Ana Neri, 12 – Bairro Gato Preto<br>
+            Sousa – PB, CEP 58802-070
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© Troodon Park Hotel. Todos os direitos reservados.</div>
+        <div>Sousa • Paraíba</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Concierge & Audio -->
+  <div class="floating-concierge">
+    <div class="concierge-pill"><span>VIP Concierge Online</span></div>
+    <a href="https://wa.me/5583991590232?text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20o%20atendimento%20do%20Troodon%20Park%20Hotel" target="_blank" class="concierge-btn-3d" aria-label="WhatsApp Concierge">💬</a>
+  </div>
+
+  <div class="widget-sound-ambient" id="soundAmbientWidget">
+    <div class="sound-waves paused">
+      <div class="sound-wave-bar"></div><div class="sound-wave-bar"></div><div class="sound-wave-bar"></div><div class="sound-wave-bar"></div>
+    </div>
+    <span>Som Cristalino</span>
+  </div>
+
+  <!-- Booking Modal Engine -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="section-kicker color-gold mb-xs">Simulador de Tarifas</div>
+          <h3>Consultar Reserva</h3>
+        </div>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="modalCheckin">Data de Check-in (a partir 14h)</label>
+            <input type="date" id="modalCheckin" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalCheckout">Data de Check-out (até 12h)</label>
+            <input type="date" id="modalCheckout" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="modalRoom">Categoria de Acomodação</label>
+            <select id="modalRoom" class="form-control">
+              <option value="standard">Quarto Standard Duplo (R$ 220/noite)</option>
+              <option value="luxo">Quarto Luxo Premium (R$ 340/noite)</option>
+              <option value="flat">Flat Mobiliado Completo (R$ 420/noite)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalGuests">Número de Hóspedes</label>
+            <select id="modalGuests" class="form-control">
+              <option value="1 Adulto">1 Adulto</option>
+              <option value="2 Adultos" selected>2 Adultos</option>
+              <option value="3 Hóspedes">3 Hóspedes</option>
+              <option value="4 Hóspedes">4 Hóspedes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-summary-box">
+          <div>
+            <div class="calc-label">Total Estimado (<span id="modalNightsCount">2 diárias</span>)</div>
+            <div class="modal-sub-label">Café da manhã regional incluso</div>
+          </div>
+          <div class="calc-price-big" id="modalTotalPrice">R$ 440,00</div>
+        </div>
+
+        <button class="btn btn-gold btn-lg w-100" id="btnSubmitWhatsApp">
+          Concluir via WhatsApp Oficial &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/tilt-3d.js"></script>
+  <script src="../assets/js/booking-system.js"></script>
+  <script>
+    function toggleFaq(button) {
+      const item = button.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const isActive = item.classList.contains('active');
+
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 30 + 'px';
+      }
+    }
+
+    function filterFaq() {
+      const query = document.getElementById('faqSearchInput').value.toLowerCase();
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(query)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
